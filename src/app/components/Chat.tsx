@@ -8,6 +8,7 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion'
 
+import ChatMessages from './ChatMessages'
 import ChatHeader from './ChatHeader'
 import ChatInput from './ChatInput'
 import { AccordionContent } from '@/components/ui/accordion'
@@ -26,7 +27,7 @@ const Chat: FC = () => {
             </AccordionTrigger>
             <AccordionContent>
                 <div className='flex flex-col h-80'>
-                    messages
+                    <ChatMessages className='px-2 py-3 flex-1'/>
                     <ChatInput className='px-4'/>
                 </div>
             </AccordionContent>
