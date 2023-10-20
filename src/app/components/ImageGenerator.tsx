@@ -1,14 +1,16 @@
 'use client'
 
-import { FC } from 'react'
+import { FC, useState } from 'react'
 
-interface ButtonProps {
+interface ImageGenerator {
     className?: string
     children?: React.ReactNode
     onClick?: () => void
 }
 
-const Button: FC<ButtonProps> = ({}) => {
+const ImageGenerator: FC<ImageGenerator> = ({}) => {
+    const [imageUrl, setImageUrl] = useState<string>('');
+
     const generateImage = async () => {
         const response = await fetch('/api/generate-image', {
             method: 'POST',
@@ -21,8 +23,12 @@ const Button: FC<ButtonProps> = ({}) => {
           if (!response.ok){
             throw new Error();
           }
-    
-          return response.body;
+          
+          const body = await response.text();
+
+          console.log(body);
+
+          return body;
     }
 
   return <button onClick={() => {
@@ -30,4 +36,4 @@ const Button: FC<ButtonProps> = ({}) => {
   }}>Click To Generate Image</button>
 }
 
-export default Button
+export default ImageGenerator;

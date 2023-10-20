@@ -8,14 +8,18 @@ export async function POST( req: Request ){
     const image = await openai.images.generate({ 
         prompt: "a white siamese cat",
         n: 1,
-        size: "1024x1024",
+        size: "256x256",
      });
 
      const url = image.data[0].url;
 
-     console.log(url)
+    //  const data = await fetch(url).json();
 
-    // console.log(image.data);
+    // console.log(data)
 
-    return new Response();
-}
+    return new Response(url);
+};
+
+
+    
+
