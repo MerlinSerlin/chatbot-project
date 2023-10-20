@@ -7,7 +7,7 @@ import { set } from "zod"
 export const SpiritAnimalContext = createContext<{
     animal: SpiritAnimal[],
     animalImageUrl: string,
-    updateAnimalImageUrl: (animalImageUrl: string, updateFn: (prevText: string) => string) => void,
+    updateAnimalImageUrl: (animalImageUrl: string) => void,
     updateAnimal: (animal: SpiritAnimal) => void,
     isAnimalUpdating: boolean,
     setIsAnimalUpdating: (isUpdating: boolean) => void,
@@ -31,7 +31,10 @@ export function SpiritAnimalProvider( { children }: { children: ReactNode }) {
     const [animal, setAnimal] = useState<SpiritAnimal[]>([
         {
             name: '',
-            symbolism: ''
+            symbolism: '',
+            when_in_balance: '',
+            when_out_of_balance: '',
+            to_bring_into_balance: '',
         }
     ])
     const [animalImageUrl, setAnimalImageUrl] = useState<string>('')

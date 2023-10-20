@@ -1,4 +1,3 @@
-import { chatbotPrompt } from '@/app/helpers/constants/chatbot-prompt'
 import {
   ChatGPTMessage,
   OpenAIStream,
@@ -7,9 +6,10 @@ import {
 import { MessageArraySchema } from '@/lib/validators/message'
 
 export async function POST(req: Request) {
-    const { messages } = await req.json()
+    const { messages, prompt } = await req.json()
 
     const parsedMessages = MessageArraySchema.parse(messages)
+    console.log(prompt);
 
     const outboundMessages: ChatGPTMessage[] = parsedMessages.map((message) => {
         return {
@@ -20,7 +20,7 @@ export async function POST(req: Request) {
 
     outboundMessages.unshift({
         role: 'system',
-        content: chatbotPrompt,
+        content: prompt,
     })
 
     const payload: OpenAIStreamPayload = {
