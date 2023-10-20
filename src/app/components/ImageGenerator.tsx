@@ -8,6 +8,8 @@ import { SpiritAnimal, getSpiritAnimal } from '../helpers/constants/animal-data'
 
 import { useMutation } from '@tanstack/react-query'
 
+import { Loader2 } from 'lucide-react'
+
 interface ImageGenerator {
     className?: string
     children?: React.ReactNode
@@ -15,55 +17,59 @@ interface ImageGenerator {
 }
 
 const ImageGenerator: FC<ImageGenerator> = ({}) => {
-    const { 
-      animal, 
-      updateAnimal,
-      isAnimalUpdating, 
-      setIsAnimalUpdating, 
-      animalImageUrl,
-      updateAnimalImageUrl,
-    } = useContext(SpiritAnimalContext);
+  const { 
+    animal, 
+    updateAnimal,
+    isAnimalUpdating, 
+    setIsAnimalUpdating, 
+    animalImageUrl,
+    updateAnimalImageUrl,
+  } = useContext(SpiritAnimalContext);
 
-    const {mutate: getAnimal, isLoading} = useMutation({
-      mutationFn: async (animal: SpiritAnimal) => {
-        const response = await fetch('/api/generate-image', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({animal: [animal]})
-        })
-  
-        if (!response.ok){
-          throw new Error();
-        }
+  const {mutate: getAnimal, isLoading} = useMutation({
+    mutationFn: async (animal: SpiritAnimal) => {
+      const response = await fetch('/api/generate-image', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({animal: [animal]})
+      })
 
-        const url = await response.text();
+      if (!response.ok){
+        throw new Error();
+      }
 
-        updateAnimalImageUrl(url);
-  
-        return response.body;
-      },
-      onMutate(animal){
-        updateAnimal(animal);
-      },
-      onSuccess: async (stream) => {
-        if (!stream) {
-          throw new Error('Stream is undefined')
-        }
-      },
-    })
+      const url = await response.text();
+
+      updateAnimalImageUrl(url);
+
+      return response.body;
+    },
+    onMutate(animal){
+      updateAnimal(animal);
+    },
+    onSuccess: async (stream) => {
+      if (!stream) {
+        throw new Error('Stream is undefined')
+      }
+    },
+  })
 
   return (
-  <button 
-    className="my-4" 
-    onClick={() => {
-      const randomAnimalFromList = getSpiritAnimal();
-      getAnimal(randomAnimalFromList);
-    }}
-  >
-    {animalImageUrl === '' ? 'Click To Find Your Spirit Animal' : 'Get a New Spirit Animal'}
-  </button>
+    isLoading ? 
+    <Loader2 className='my-4 w-6 h-6 animate-spin' />
+    :
+    <button 
+      disabled={isLoading}
+      className="my-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" 
+      onClick={() => {
+        const randomAnimalFromList = getSpiritAnimal();
+        getAnimal(randomAnimalFromList);
+      }}
+    >
+      {animalImageUrl === '' ? 'Click To Find Your Spirit Animal' : 'Get a New Spirit Animal'}
+    </button>
   )
 }
 
