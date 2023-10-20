@@ -9,12 +9,17 @@ import { Message } from '@/lib/validators/message';
 import { MessagesContext } from '@/context/messages';
 import { CornerDownLeft, Loader2 } from 'lucide-react';
 import toast from 'react-hot-toast';
+import ChatbotPrompt from './ChatbotPrompt';
+// import { GetChatbotPrompt } from '../helpers/constants/chatbot-prompt';
 
 
 interface ChatInputProps extends HTMLAttributes<HTMLDivElement> {}
 
 const ChatInput: FC<ChatInputProps> = ({className, ...props}) => {
   const [input, setInput] = useState<string>('')
+
+  const prompt = ChatbotPrompt();
+
   const { 
     messages, 
     addMessage, 
@@ -22,6 +27,7 @@ const ChatInput: FC<ChatInputProps> = ({className, ...props}) => {
     updateMessage, 
     setIsMessageUpdating
   } = useContext(MessagesContext)
+
   const textAreaRef = useRef<null | HTMLTextAreaElement>(null);
 
   const {mutate: sendMessage, isLoading} = useMutation({
@@ -31,7 +37,10 @@ const ChatInput: FC<ChatInputProps> = ({className, ...props}) => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({messages: [message]})
+        body: JSON.stringify({
+          messages: [message],
+          prompt: prompt,
+        })
       })
 
       if (!response.ok){
@@ -67,7 +76,6 @@ const ChatInput: FC<ChatInputProps> = ({className, ...props}) => {
         const { value, done: doneReading } = await reader.read()
         done = doneReading
         const chunkValue = decoder.decode(value);
-        console.log(chunkValue);
         updateMessage(id, (prevText) => prevText + chunkValue);
       }
 

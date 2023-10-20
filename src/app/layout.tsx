@@ -7,8 +7,8 @@ import Providers from './components/Providers'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Bookbuddy',
-  description: 'Your bookstore for fantasy and mystery novels',
+  title: 'Spirit Animal Generator',
+  description: 'Your sprit guide on demand',
 }
 
 export default function RootLayout({
