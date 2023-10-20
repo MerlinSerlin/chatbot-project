@@ -9,7 +9,6 @@ export async function POST(req: Request) {
     const { messages, prompt } = await req.json()
 
     const parsedMessages = MessageArraySchema.parse(messages)
-    console.log(prompt);
 
     const outboundMessages: ChatGPTMessage[] = parsedMessages.map((message) => {
         return {

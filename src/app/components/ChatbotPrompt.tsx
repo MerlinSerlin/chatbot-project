@@ -1,9 +1,8 @@
-'use client'
+import { FC } from 'react'
+import { useContext } from 'react';
+import { SpiritAnimalContext } from '@/context/spirit-animal';
 
-import { useContext } from "react";
-import { SpiritAnimalContext } from "@/context/spirit-animal";
-
-export function getChatbotPrompt(){
+export const ChatbotPrompt = () => {
     const { animal } = useContext(SpiritAnimalContext);
 
     const prompt = animal.length === 1 ? `
@@ -25,6 +24,6 @@ export function getChatbotPrompt(){
         To bring yourself into balance, ${animal[animal.length - 1].to_bring_into_balance}.
     `
     return prompt;
-} 
+}
 
-
+export default ChatbotPrompt

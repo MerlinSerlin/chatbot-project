@@ -7,10 +7,10 @@ import { useMutation } from '@tanstack/react-query';
 import { nanoid } from 'nanoid';
 import { Message } from '@/lib/validators/message';
 import { MessagesContext } from '@/context/messages';
-import { SpiritAnimalContext } from '@/context/spirit-animal';
 import { CornerDownLeft, Loader2 } from 'lucide-react';
 import toast from 'react-hot-toast';
-import { getChatbotPrompt } from '../helpers/constants/chatbot-prompt';
+import ChatbotPrompt from './ChatbotPrompt';
+// import { GetChatbotPrompt } from '../helpers/constants/chatbot-prompt';
 
 
 interface ChatInputProps extends HTMLAttributes<HTMLDivElement> {}
@@ -18,7 +18,7 @@ interface ChatInputProps extends HTMLAttributes<HTMLDivElement> {}
 const ChatInput: FC<ChatInputProps> = ({className, ...props}) => {
   const [input, setInput] = useState<string>('')
 
-  const prompt = getChatbotPrompt();
+  const prompt = ChatbotPrompt();
 
   const { 
     messages, 
@@ -76,7 +76,6 @@ const ChatInput: FC<ChatInputProps> = ({className, ...props}) => {
         const { value, done: doneReading } = await reader.read()
         done = doneReading
         const chunkValue = decoder.decode(value);
-        console.log(chunkValue);
         updateMessage(id, (prevText) => prevText + chunkValue);
       }
 
