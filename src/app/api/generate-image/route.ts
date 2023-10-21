@@ -15,9 +15,7 @@ export async function POST( req: Request ){
         The entire spirit animal's body should be in the image.
         The spirit animal should be looking at the viewer.
         The spirit animal is in the foreground with deep hues of blues and greens in the background.
-        The spirit animal has a calm, peaceful expression.
         If the animal has eyes, their eyes should be open and looking directly at the viewer. 
-        Their face shows emotion, primarily empathy and these qualities: ${animal[0].symbolism}
         `,
         n: 1,
         size: "512x512",
