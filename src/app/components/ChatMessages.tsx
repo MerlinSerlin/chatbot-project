@@ -20,9 +20,9 @@ const ChatMessages: FC<ChatMessagesProps> = ({className, ...props}) => {
     const currentAnimalName = animal[animal.length - 1].name;
 
     const text = animal.length === 1 ?
-    'Hello! I am your spirit animal guide. Click the button to generate a spirit animal or ask me a question.'
+    'Hello! I am your Spirit Animal Guide. Click the button to generate a spirit animal or ask me a question.'
     : 
-    `Hello! I am your Spirit ${currentAnimalName}. How may I be of service?` 
+    `Hello! I am your ${currentAnimalName} Animal Spirit. How may I be of service?` 
 
     useEffect(() => {
       removeAllMessages();

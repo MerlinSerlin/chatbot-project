@@ -5,10 +5,12 @@ import { SpiritAnimalContext } from '@/context/spirit-animal'
 import { set } from 'zod'
 
 const ChatHeader: FC = () => {
-  const [currentChatbotName, setCurrentChatbotName] = useState('Website Chatbot')
 
   const { animal } = useContext(SpiritAnimalContext)
+
   const currentAnimalName = animal[animal.length - 1].name;
+
+  const chatbotName = animal.length === 1 ? 'Spirit Animal Guide' : `${currentAnimalName} Animal Spirit`;
 
   return (
     <div className='w-full flex gap-3 justify-start items-center text-zinc-800'>
@@ -16,7 +18,7 @@ const ChatHeader: FC = () => {
         <p className='text-xs'>Chat with</p>
         <div className='flex gap-1.5 items-center'>
           <p className='w-2 h-2 rounded-full bg-blue-500' />
-          <p className='font-medium'>Your {currentAnimalName} Spirit Animal</p>
+          <p className='font-medium'>Your {chatbotName}</p>
         </div>
       </div>
     </div>

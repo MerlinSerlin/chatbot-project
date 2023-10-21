@@ -6,6 +6,7 @@ export const SpiritAnimalSchema = z.object({
   when_in_balance: z.string(),
   when_out_of_balance: z.string(),
   to_bring_into_balance: z.string(),
+  sounds: z.string(),
 })
 
 // array validator

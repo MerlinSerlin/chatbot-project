@@ -26,6 +26,7 @@ export function SpiritAnimalProvider( { children }: { children: ReactNode }) {
             when_in_balance: '',
             when_out_of_balance: '',
             to_bring_into_balance: '',
+            sounds: ''
         }
     ])
     const [animalImageUrl, setAnimalImageUrl] = useState<string>('')

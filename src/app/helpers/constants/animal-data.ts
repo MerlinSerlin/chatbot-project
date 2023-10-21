@@ -4,6 +4,7 @@ export interface SpiritAnimal {
     when_in_balance: string;
     when_out_of_balance: string;
     to_bring_into_balance: string;
+    sounds: string;
   }
   
   const spiritAnimals: SpiritAnimal[] = [
@@ -13,6 +14,7 @@ export interface SpiritAnimal {
       when_in_balance: "Harmony with instincts and community",
       when_out_of_balance: "Excessive dominance or submission",
       to_bring_into_balance: "Embrace the pack's unity and hierarchy",
+      sounds: "Howling and growling",
     },
     {
       name: "Eagle",
@@ -20,6 +22,7 @@ export interface SpiritAnimal {
       when_in_balance: "Clear vision and focus",
       when_out_of_balance: "Feeling restricted or stagnant",
       to_bring_into_balance: "Soar to new heights and gain perspective",
+      sounds: "Screeching and chirping",
     },
     {
       name: "Bear",
@@ -27,6 +30,7 @@ export interface SpiritAnimal {
       when_in_balance: "Strong, nurturing, and protective",
       when_out_of_balance: "Aggressiveness or excessive isolation",
       to_bring_into_balance: "Embrace your strength and connect with others",
+      sounds: "Growling and roaring",
     },
     {
       name: "Hawk",
@@ -34,6 +38,7 @@ export interface SpiritAnimal {
       when_in_balance: "Clear-sighted and observant",
       when_out_of_balance: "Overly critical or lost in details",
       to_bring_into_balance: "Maintain a high perspective and focus on the big picture",
+      sounds: "Screeching and calling",
     },
     {
       name: "Owl",
@@ -41,6 +46,7 @@ export interface SpiritAnimal {
       when_in_balance: "Wisdom and adaptability in transitions",
       when_out_of_balance: "Feeling lost or confused",
       to_bring_into_balance: "Embrace the mysteries of life and trust your intuition",
+      sounds: "Hooting and screeching",
     },
     {
       name: "Turtle",
@@ -48,6 +54,7 @@ export interface SpiritAnimal {
       when_in_balance: "Grounded and patient",
       when_out_of_balance: "Stubbornness or stuck in a rut",
       to_bring_into_balance: "Embrace change and go with the flow",
+      sounds: "Hissing and hissing",
     },
     {
       name: "Dolphin",
@@ -55,6 +62,7 @@ export interface SpiritAnimal {
       when_in_balance: "Joyful and harmonious relationships",
       when_out_of_balance: "Difficulty in expressing emotions",
       to_bring_into_balance: "Connect with others and express your feelings",
+      sounds: "Clicking and whistling",
     },
     {
       name: "Butterfly",
@@ -62,6 +70,7 @@ export interface SpiritAnimal {
       when_in_balance: "Embracing change and personal growth",
       when_out_of_balance: "Resisting transformation or feeling stuck",
       to_bring_into_balance: "Embrace your own beauty and embrace change",
+      sounds: "Silent fluttering",
     },
     {
       name: "Fox",
@@ -69,6 +78,7 @@ export interface SpiritAnimal {
       when_in_balance: "Clever problem-solving and adaptability",
       when_out_of_balance: "Deceit or manipulation",
       to_bring_into_balance: "Use your intelligence for positive purposes",
+      sounds: "Crafty barking and yipping",
     },
     {
       name: "Lion",
@@ -76,6 +86,7 @@ export interface SpiritAnimal {
       when_in_balance: "Confident and assertive leadership",
       when_out_of_balance: "Aggressiveness or arrogance",
       to_bring_into_balance: "Lead with compassion and humility",
+      sounds: "Roaring and growling",
     },
     {
       name: "Snake",
@@ -83,6 +94,7 @@ export interface SpiritAnimal {
       when_in_balance: "Successful transitions and healing",
       when_out_of_balance: "Fear or resistance to change",
       to_bring_into_balance: "Embrace change and heal from the past",
+      sounds: "Hissing and rattling",
     },
     {
       name: "Panther",
@@ -90,6 +102,7 @@ export interface SpiritAnimal {
       when_in_balance: "Magnetic and sensual presence",
       when_out_of_balance: "Insecurity or lack of self-empowerment",
       to_bring_into_balance: "Reclaim your inner power and embrace sensuality",
+      sounds: "Silent prowling",
     },
     {
       name: "Elephant",
@@ -97,6 +110,7 @@ export interface SpiritAnimal {
       when_in_balance: "Wise and nurturing family bonds",
       when_out_of_balance: "Stubbornness or excessive protectiveness",
       to_bring_into_balance: "Balance your strength and wisdom with compassion",
+      sounds: "Trumpeting and rumbling",
     },
     {
       name: "Deer",
@@ -104,6 +118,7 @@ export interface SpiritAnimal {
       when_in_balance: "Gentle and intuitive presence",
       when_out_of_balance: "Over-sensitivity or timidity",
       to_bring_into_balance: "Trust your intuition and express your grace",
+      sounds: "Mating calls and grunts",
     },
     {
       name: "Tiger",
@@ -111,6 +126,7 @@ export interface SpiritAnimal {
       when_in_balance: "Confident and passionate expression",
       when_out_of_balance: "Aggressiveness or reckless behavior",
       to_bring_into_balance: "Harness your power with courage and control",
+      sounds: "Roaring and growling",
     },
     {
       name: "Horse",
@@ -118,6 +134,7 @@ export interface SpiritAnimal {
       when_in_balance: "Graceful and empowered movement",
       when_out_of_balance: "Restlessness or running away from challenges",
       to_bring_into_balance: "Embrace your inner power and navigate with grace",
+      sounds: "Neighing and whinnying",
     },
     {
       name: "Dragonfly",
@@ -125,6 +142,7 @@ export interface SpiritAnimal {
       when_in_balance: "Adaptive and light-hearted approach",
       when_out_of_balance: "Fickleness or lack of focus",
       to_bring_into_balance: "Embrace change and stay grounded in your goals",
+      sounds: "Silent flight",
     },
     {
       name: "Coyote",
@@ -132,6 +150,7 @@ export interface SpiritAnimal {
       when_in_balance: "Inventive and humorous problem-solving",
       when_out_of_balance: "Deceit or causing harm to others",
       to_bring_into_balance: "Use humor and ingenuity for positive outcomes",
+      sounds: "Tricky howling and yipping",
     },
     {
       name: "Raven",
@@ -139,6 +158,7 @@ export interface SpiritAnimal {
       when_in_balance: "Mystical and transformative presence",
       when_out_of_balance: "Misuse of power or manipulation",
       to_bring_into_balance: "Use your insight for positive transformation",
+      sounds: "Cawing and croaking",
     },
     {
       name: "Shark",
@@ -146,6 +166,7 @@ export interface SpiritAnimal {
       when_in_balance: "Confident and adaptable decision-making",
       when_out_of_balance: "Aggressiveness or misuse of authority",
       to_bring_into_balance: "Lead with confidence and adaptability",
+      sounds: "Thrashing and splashing",
     },
     {
       name: "Buffalo",
@@ -153,6 +174,7 @@ export interface SpiritAnimal {
       when_in_balance: "Abundant and grateful presence",
       when_out_of_balance: "Greed or excessive materialism",
       to_bring_into_balance: "Embrace gratitude and share your abundance",
+      sounds: "Low grunts and bellows",
     },
     {
       name: "Spider",
@@ -160,6 +182,7 @@ export interface SpiritAnimal {
       when_in_balance: "Creative and patient web-weaving",
       when_out_of_balance: "Being overly controlling or manipulative",
       to_bring_into_balance: "Trust the creative process and let go of control",
+      sounds: "Silent and subtle movements",
     },
     {
       name: "Peacock",
@@ -167,6 +190,7 @@ export interface SpiritAnimal {
       when_in_balance: "Confident and vibrant self-expression",
       when_out_of_balance: "Excessive vanity or pride",
       to_bring_into_balance: "Embrace your inner beauty and share it with confidence",
+      sounds: "Loud and distinctive calls",
     },
     {
       name: "Penguin",
@@ -174,6 +198,7 @@ export interface SpiritAnimal {
       when_in_balance: "Adapted and determined teamwork",
       when_out_of_balance: "Excessive conformity or isolation",
       to_bring_into_balance: "Balance teamwork with individuality and determination",
+      sounds: "Braying and vocalizations",
     },
     {
       name: "Giraffe",
@@ -181,6 +206,7 @@ export interface SpiritAnimal {
       when_in_balance: "Graceful and intuitive forward vision",
       when_out_of_balance: "Stubbornness or inability to adapt",
       to_bring_into_balance: "Trust your intuition and adapt with grace",
+      sounds: "Low moans and grunts",
     },
     {
       name: "Panda",
@@ -188,6 +214,7 @@ export interface SpiritAnimal {
       when_in_balance: "Gentle and harmonious presence",
       when_out_of_balance: "Laziness or excessive passivity",
       to_bring_into_balance: "Embrace your gentleness and seek inner peace",
+      sounds: "Chirping and bleating",
     },
     {
       name: "Squirrel",
@@ -195,6 +222,7 @@ export interface SpiritAnimal {
       when_in_balance: "Resourceful and playful approach",
       when_out_of_balance: "Hoarding or excessive busyness",
       to_bring_into_balance: "Plan for the future while enjoying the present",
+      sounds: "Chattering and screeching",
     },
     {
       name: "Dragon",
@@ -202,6 +230,7 @@ export interface SpiritAnimal {
       when_in_balance: "Powerful and transformative presence",
       when_out_of_balance: "Destructive or overbearing behavior",
       to_bring_into_balance: "Use your strength for positive transformation",
+      sounds: "Roaring and hissing",
     },
     {
       name: "Octopus",
@@ -209,6 +238,7 @@ export interface SpiritAnimal {
       when_in_balance: "Complex and intelligent problem-solving",
       when_out_of_balance: "Deceit or manipulation",
       to_bring_into_balance: "Use your intelligence for positive adaptability",
+      sounds: "Silent and subtle movements",
     },
     {
       name: "Crane",
@@ -216,6 +246,7 @@ export interface SpiritAnimal {
       when_in_balance: "Serenely focused and graceful presence",
       when_out_of_balance: "Excessive rigidity or impulsivity",
       to_bring_into_balance: "Maintain serenity and flexibility in your focus",
+      sounds: "Trumpeting and croaking",
     },
     {
       name: "Cheetah",
@@ -223,6 +254,7 @@ export interface SpiritAnimal {
       when_in_balance: "Focused and determined pursuit of goals",
       when_out_of_balance: "Impulsivity or lack of direction",
       to_bring_into_balance: "Maintain focus and use speed wisely",
+      sounds: "Chirping and growling",
     },
     {
       name: "Otter",
@@ -230,6 +262,7 @@ export interface SpiritAnimal {
       when_in_balance: "Joyful and creative expression",
       when_out_of_balance: "Restlessness or lack of focus",
       to_bring_into_balance: "Embrace joy and express your creativity",
+      sounds: "Chirping and whistling",
     },
     {
       name: "Swan",
@@ -237,6 +270,7 @@ export interface SpiritAnimal {
       when_in_balance: "Graceful and beautiful self-expression",
       when_out_of_balance: "Excessive self-indulgence or vanity",
       to_bring_into_balance: "Express your inner beauty with grace",
+      sounds: "Elegant and melodious calls",
     },
     {
       name: "Gazelle",
@@ -244,6 +278,7 @@ export interface SpiritAnimal {
       when_in_balance: "Elegant and agile movement",
       when_out_of_balance: "Restlessness or lack of focus",
       to_bring_into_balance: "Embrace your elegance and agility",
+      sounds: "Soft and subtle vocalizations",
     },
     {
       name: "Raccoon",
@@ -251,6 +286,7 @@ export interface SpiritAnimal {
       when_in_balance: "Curious and clever problem-solving",
       when_out_of_balance: "Deceit or excessive trickery",
       to_bring_into_balance: "Use your cleverness for positive solutions",
+      sounds: "Chirping and purring",
     },
     {
       name: "Kangaroo",
@@ -258,6 +294,7 @@ export interface SpiritAnimal {
       when_in_balance: "Balanced and adventurous spirit",
       when_out_of_balance: "Impulsivity or recklessness",
       to_bring_into_balance: "Balance strength with wise adventures",
+      sounds: "Thumping and hissing",
     },
     {
       name: "Jaguar",
@@ -265,6 +302,7 @@ export interface SpiritAnimal {
       when_in_balance: "Powerful and fearless presence",
       when_out_of_balance: "Aggressiveness or misuse of power",
       to_bring_into_balance: "Use your power wisely and stealthily",
+      sounds: "Roaring and growling",
     },
     {
       name: "Antelope",
@@ -272,6 +310,7 @@ export interface SpiritAnimal {
       when_in_balance: "Graceful and speedy adaptation",
       when_out_of_balance: "Excessive haste or instability",
       to_bring_into_balance: "Embrace grace and adapt with care",
+      sounds: "Barking and bleating",
     },
     {
       name: "Puma",
@@ -279,6 +318,7 @@ export interface SpiritAnimal {
       when_in_balance: "Independently strong and courageous",
       when_out_of_balance: "Recklessness or excessive independence",
       to_bring_into_balance: "Maintain courage with thoughtful independence",
+      sounds: "Whistling and growling",
     },
     {
       name: "Hedgehog",
@@ -286,6 +326,7 @@ export interface SpiritAnimal {
       when_in_balance: "Protective and adaptable defense",
       when_out_of_balance: "Excessive defensiveness or vulnerability",
       to_bring_into_balance: "Adapt and protect wisely",
+      sounds: "Hissing and grunting",
     },
     {
       name: "Wolverine",
@@ -293,6 +334,7 @@ export interface SpiritAnimal {
       when_in_balance: "Fearless, strong, and enduring",
       when_out_of_balance: "Aggressiveness or misuse of strength",
       to_bring_into_balance: "Use your strength with fearlessness",
+      sounds: "Growling and barking",
     },
     {
       name: "Salamander",
@@ -300,6 +342,7 @@ export interface SpiritAnimal {
       when_in_balance: "Successfully transformative and regenerative",
       when_out_of_balance: "Resisting change or stagnation",
       to_bring_into_balance: "Embrace change and renewal",
+      sounds: "Subtle vocalizations",
     },
     {
       name: "Lynx",
@@ -307,6 +350,7 @@ export interface SpiritAnimal {
       when_in_balance: "Keen and patient observation",
       when_out_of_balance: "Paranoia or lack of patience",
       to_bring_into_balance: "Observe with patience and trust your intuition",
+      sounds: "Screaming and growling",
     },
     {
       name: "Orca",
@@ -314,6 +358,7 @@ export interface SpiritAnimal {
       when_in_balance: "Communicative and powerful community bonds",
       when_out_of_balance: "Power struggles or isolation",
       to_bring_into_balance: "Use your power for the good of the community",
+      sounds: "Clicking and whistling",
     },
     {
       name: "Mantis",
@@ -321,6 +366,7 @@ export interface SpiritAnimal {
       when_in_balance: "Still and focused presence",
       when_out_of_balance: "Impulsivity or restlessness",
       to_bring_into_balance: "Embrace stillness and focus",
+      sounds: "Subtle hissing and rustling",
     },
     {
       name: "Camel",
@@ -328,6 +374,7 @@ export interface SpiritAnimal {
       when_in_balance: "Enduring and resourceful adaptability",
       when_out_of_balance: "Stubbornness or excessive self-sacrifice",
       to_bring_into_balance: "Adapt with endurance and self-care",
+      sounds: "Grunting and groaning",
     },
     {
       name: "Chameleon",
@@ -335,6 +382,7 @@ export interface SpiritAnimal {
       when_in_balance: "Flexible and adaptable change",
       when_out_of_balance: "Lack of identity or superficiality",
       to_bring_into_balance: "Embrace change with your true identity",
+      sounds: "Silent and subtle movements",
     },
     {
       name: "Gorilla",
@@ -342,6 +390,7 @@ export interface SpiritAnimal {
       when_in_balance: "Strong, family-oriented leadership",
       when_out_of_balance: "Aggressiveness or excessive dominance",
       to_bring_into_balance: "Lead with strength and family values",
+      sounds: "Roaring and grunting",
     },
     {
       name: "Crab",
@@ -349,6 +398,7 @@ export interface SpiritAnimal {
       when_in_balance: "Protective and adaptable emotional bonds",
       when_out_of_balance: "Excessive moodiness or clinging",
       to_bring_into_balance: "Embrace emotional bonds with adaptability",
+      sounds: "Scuttling and subtle vocalizations",
     },
     {
       name: "Whale",
@@ -356,6 +406,7 @@ export interface SpiritAnimal {
       when_in_balance: "Emotionally creative and communicative",
       when_out_of_balance: "Excessive emotionality or detachment",
       to_bring_into_balance: "Balance your emotions with creative expression",
+      sounds: "Singing and vocalizations",
     },
     {
       name: "Llama",
@@ -363,6 +414,7 @@ export interface SpiritAnimal {
       when_in_balance: "Strong, enduring, and free-spirited",
       when_out_of_balance: "Stubbornness or excessive restraint",
       to_bring_into_balance: "Balance strength with freedom and endurance",
+      sounds: "Humming and subtle vocalizations",
     },
     {
       name: "Woodpecker",
@@ -370,6 +422,7 @@ export interface SpiritAnimal {
       when_in_balance: "Determined and balanced pursuit of opportunities",
       when_out_of_balance: "Impulsivity or missing opportunities",
       to_bring_into_balance: "Maintain determination and balance in seizing opportunities",
+      sounds: "Drumming and tapping",
     },
     {
       name: "Sheep",
@@ -377,6 +430,7 @@ export interface SpiritAnimal {
       when_in_balance: "Gentle, harmonious, and community-minded",
       when_out_of_balance: "Excessive conformity or passivity",
       to_bring_into_balance: "Embrace gentleness and contribute to your community",
+      sounds: "Bleating and baaing",
     },
     {
       name: "Seagull",
@@ -384,6 +438,7 @@ export interface SpiritAnimal {
       when_in_balance: "Free-spirited and adaptable pursuit of opportunities",
       when_out_of_balance: "Restlessness or scattering energy",
       to_bring_into_balance: "Embrace freedom while maintaining focus on opportunities",
+      sounds: "Cawing and squawking",
     },
     {
       name: "Parrot",
@@ -391,6 +446,7 @@ export interface SpiritAnimal {
       when_in_balance: "Communicative, expressive, and intelligent",
       when_out_of_balance: "Excessive chatter or superficiality",
       to_bring_into_balance: "Express your intelligence through meaningful communication",
+      sounds: "Vocal mimicry and squawking",
     },
     {
       name: "Moose",
@@ -398,6 +454,7 @@ export interface SpiritAnimal {
       when_in_balance: "Confident, self-assured, and proud",
       when_out_of_balance: "Excessive pride or arrogance",
       to_bring_into_balance: "Maintain confidence with humility",
+      sounds: "Low grunting and calls",
     },
     {
       name: "Rat",
@@ -405,6 +462,7 @@ export interface SpiritAnimal {
       when_in_balance: "Resourceful, adaptable, and intelligent problem-solving",
       when_out_of_balance: "Deceit or cunning manipulation",
       to_bring_into_balance: "Use your intelligence for resourceful and positive solutions",
+      sounds: "Squeaking and gnawing",
     },
     {
       name: "Toucan",
@@ -412,6 +470,7 @@ export interface SpiritAnimal {
       when_in_balance: "Opportunistic, colorful, and expressive",
       when_out_of_balance: "Excessive opportunism or superficiality",
       to_bring_into_balance: "Embrace opportunities with authentic and colorful expression",
+      sounds: "Loud croaking and calls",
     },
     {
       name: "Gull",
@@ -419,107 +478,124 @@ export interface SpiritAnimal {
       when_in_balance: "Versatile, free-spirited, and opportunistic",
       when_out_of_balance: "Restlessness or opportunism without purpose",
       to_bring_into_balance: "Embrace versatility and pursue opportunities with purpose",
+      sounds: "Cawing and screeching",
     },
     {
       name: "Zebra",
       symbolism: "Individuality, Uniqueness, Community",
       when_in_balance: "Uniquely individual and community-minded",
-      when_out_of_balance: "Excessive conformity or isolation",
-      to_bring_into_balance: "Express your individuality within your community",
+      when_out_of_balance: "Excessive conformity or divisiveness",
+      to_bring_into_balance: "Embrace your individuality while contributing to your community",
+      sounds: "Barking and calling",
     },
+
     {
-      name: "Frog",
-      symbolism: "Transformation, Cleansing, Renewal",
-      when_in_balance: "Transformative, cleansing, and renewing presence",
-      when_out_of_balance: "Resisting transformation or clinging to the past",
-      to_bring_into_balance: "Embrace change and renewal with grace",
-    },
-    {
-      name: "Ant",
-      symbolism: "Teamwork, Diligence, Patience",
-      when_in_balance: "Diligent and patient teamwork",
-      when_out_of_balance: "Excessive conformity or impatience",
-      to_bring_into_balance: "Work diligently with patience and a sense of purpose",
-    },
-    {
-      name: "Ladybug",
-      symbolism: "Luck, Abundance, Protection",
-      when_in_balance: "Lucky, abundant, and protective presence",
-      when_out_of_balance: "Superstition or over-reliance on luck",
-      to_bring_into_balance: "Embrace luck while taking proactive measures for abundance and protection",
-    },
-    {
-      name: "Blue Jay",
-      symbolism: "Clarity, Communication, Resourcefulness",
-      when_in_balance: "Clear, communicative, and resourceful expression",
-      when_out_of_balance: "Excessive chatter or superficial communication",
-      to_bring_into_balance: "Communicate with clarity and depth of thought",
-    },
-    {
-      name: "Polar Bear",
-      symbolism: "Strength, Endurance, Resilience",
-      when_in_balance: "Strong, enduring, and resilient",
-      when_out_of_balance: "Aggressiveness or excessive stubbornness",
-      to_bring_into_balance: "Maintain strength with resilience and adaptability",
-    },
-    {
-      name: "Jellyfish",
-      symbolism: "Flow, Adaptability, Flexibility",
-      when_in_balance: "Flowing, adaptable, and flexible approach",
-      when_out_of_balance: "Lack of direction or excessive drift",
-      to_bring_into_balance: "Navigate life's currents with adaptability and purpose",
-    },
-    {
-      name: "Pigeon",
-      symbolism: "Peace, Cooperation, Adaptability",
-      when_in_balance: "Peaceful, cooperative, and adaptable",
-      when_out_of_balance: "Excessive conformity or passivity",
-      to_bring_into_balance: "Embrace peace and cooperate with adaptability",
-    },
-    {
-      name: "Chipmunk",
-      symbolism: "Preparation, Resourcefulness, Playfulness",
-      when_in_balance: "Prepared, resourceful, and playful",
-      when_out_of_balance: "Hoarding or excessive busyness",
-      to_bring_into_balance: "Plan for the future while enjoying the present",
-    },
-    {
-      name: "Hyena",
-      symbolism: "Laughter, Adaptability, Cunning",
-      when_in_balance: "Adaptive, cunning, and humor-filled",
-      when_out_of_balance: "Excessive trickery or malicious humor",
-      to_bring_into_balance: "Use your humor and cunning for positive outcomes",
-    },
-    {
-      name: "Gibbon",
-      symbolism: "Agility, Playfulness, Connection",
-      when_in_balance: "Agile, playful, and connected",
-      when_out_of_balance: "Restlessness or excessive play without purpose",
-      to_bring_into_balance: "Play with agility and maintain meaningful connections",
-    },
-    {
-      name: "Koala",
-      symbolism: "Calmness, Nurturing, Contentment",
-      when_in_balance: "Calm, nurturing, and contented presence",
-      when_out_of_balance: "Excessive passivity or apathy",
-      to_bring_into_balance: "Embrace calmness and nurturing while seeking contentment",
-    },
-    {
-      name: "Echidna",
-      symbolism: "Patience, Adaptation, Defense",
-      when_in_balance: "Patient, adaptable, and defensive when needed",
-      when_out_of_balance: "Excessive defensiveness or vulnerability",
-      to_bring_into_balance: "Adapt and protect wisely with patience",
-    },
-    {
-      name: "Pangolin",
-      symbolism: "Protection, Solitude, Anticipation",
-      when_in_balance: "Protective, solitary, and anticipative",
-      when_out_of_balance: "Excessive isolation or mistrust",
-      to_bring_into_balance: "Embrace protection, solitude, and positive anticipation",
-    },
-  ];
-  
+    name: "Frog",
+    symbolism: "Transformation, Cleansing, Renewal",
+    when_in_balance: "Transformative, cleansing, and renewing presence",
+    when_out_of_balance: "Resisting transformation or clinging to the past",
+    to_bring_into_balance: "Embrace change and renewal with grace",
+    sounds: "Croaking and ribbiting",
+  },
+  {
+    name: "Ant",
+    symbolism: "Teamwork, Diligence, Patience",
+    when_in_balance: "Diligent and patient teamwork",
+    when_out_of_balance: "Excessive conformity or impatience",
+    to_bring_into_balance: "Work diligently with patience and a sense of purpose",
+    sounds: "Rustling and buzzing",
+  },
+  {
+    name: "Ladybug",
+    symbolism: "Luck, Abundance, Protection",
+    when_in_balance: "Lucky, abundant, and protective presence",
+    when_out_of_balance: "Superstition or over-reliance on luck",
+    to_bring_into_balance: "Embrace luck while taking proactive measures for abundance and protection",
+    sounds: "Soft buzzing and chirping",
+  },
+  {
+    name: "Blue Jay",
+    symbolism: "Clarity, Communication, Resourcefulness",
+    when_in_balance: "Clear, communicative, and resourceful expression",
+    when_out_of_balance: "Excessive chatter or superficial communication",
+    to_bring_into_balance: "Communicate with clarity and depth of thought",
+    sounds: "Loud and distinctive calls",
+  },
+  {
+    name: "Polar Bear",
+    symbolism: "Strength, Endurance, Resilience",
+    when_in_balance: "Strong, enduring, and resilient",
+    when_out_of_balance: "Aggressiveness or excessive stubbornness",
+    to_bring_into_balance: "Maintain strength with resilience and adaptability",
+    sounds: "Growling and roaring",
+  },
+  {
+    name: "Jellyfish",
+    symbolism: "Flow, Adaptability, Flexibility",
+    when_in_balance: "Flowing, adaptable, and flexible approach",
+    when_out_of_balance: "Lack of direction or excessive drift",
+    to_bring_into_balance: "Navigate life's currents with adaptability and purpose",
+    sounds: "Silent and graceful movement",
+  },
+  {
+    name: "Pigeon",
+    symbolism: "Peace, Cooperation, Adaptability",
+    when_in_balance: "Peaceful, cooperative, and adaptable",
+    when_out_of_balance: "Excessive conformity or passivity",
+    to_bring_into_balance: "Embrace peace and cooperate with adaptability",
+    sounds: "Coos and soft cooing sounds",
+  },
+  {
+    name: "Chipmunk",
+    symbolism: "Preparation, Resourcefulness, Playfulness",
+    when_in_balance: "Prepared, resourceful, and playful",
+    when_out_of_balance: "Hoarding or excessive busyness",
+    to_bring_into_balance: "Plan for the future while enjoying the present",
+    sounds: "Chirping and chattering",
+  },
+  {
+    name: "Hyena",
+    symbolism: "Laughter, Adaptability, Cunning",
+    when_in_balance: "Adaptive, cunning, and humor-filled",
+    when_out_of_balance: "Excessive trickery or malicious humor",
+    to_bring_into_balance: "Use your humor and cunning for positive outcomes",
+    sounds: "Cackles and laughter-like vocalizations",
+  },
+  {
+    name: "Gibbon",
+    symbolism: "Agility, Playfulness, Connection",
+    when_in_balance: "Agile, playful, and connected",
+    when_out_of_balance: "Restlessness or excessive play without purpose",
+    to_bring_into_balance: "Play with agility and maintain meaningful connections",
+    sounds: "Loud calls and whooping sounds",
+  },
+  {
+    name: "Koala",
+    symbolism: "Calmness, Nurturing, Contentment",
+    when_in_balance: "Calm, nurturing, and contented presence",
+    when_out_of_balance: "Excessive passivity or apathy",
+    to_bring_into_balance: "Embrace calmness and nurturing while seeking contentment",
+    sounds: "Low grunts and vocalizations",
+  },
+  {
+    name: "Echidna",
+    symbolism: "Patience, Adaptation, Defense",
+    when_in_balance: "Patient, adaptable, and defensive when needed",
+    when_out_of_balance: "Excessive defensiveness or vulnerability",
+    to_bring_into_balance: "Adapt and protect wisely with patience",
+    sounds: "Hisses and snuffling noises",
+  },
+  {
+    name: "Pangolin",
+    symbolism: "Protection, Solitude, Anticipation",
+    when_in_balance: "Protective, solitary, and anticipative",
+    when_out_of_balance: "Excessive isolation or mistrust",
+    to_bring_into_balance: "Embrace protection, solitude, and positive anticipation",
+    sounds: "Soft hisses and rustling scales",
+  },
+];
+
+
 export function getSpiritAnimal() {
     const arr = [];
     const randomIndex = Math.floor(Math.random() * spiritAnimals.length);

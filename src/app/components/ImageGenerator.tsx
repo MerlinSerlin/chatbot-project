@@ -68,10 +68,6 @@ const ImageGenerator: FC<ImageGenerator> = ({}) => {
     :
     <button 
       disabled={isLoading}
-      // className={cn(
-      //   overlaidBtnClassName,
-      //   'bg-white hover:bg-gray-100 text-zinc-800 font-semibold py-2 px-4 border border-white-400 rounded shadow'
-      // )}
       className={
         cn(
           overlaidBtnClassName,
