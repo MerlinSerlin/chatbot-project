@@ -1,4 +1,4 @@
-import { ReactNode, createContext, useState } from "react"
+import { ReactNode, createContext, useContext, useState } from "react"
 import { Message } from "@/lib/validators/message"
 import { nanoid } from "nanoid"
 
@@ -7,6 +7,7 @@ export const MessagesContext = createContext<{
     isMessageUpdating: boolean,
     addMessage: (message: Message) => void,
     removeMessage: (id: string) => void,
+    removeAllMessages: () => void,
     updateMessage: (id: string, updateFn: (prevText: string) => string) => void,
     setIsMessageUpdating: (isUpdating: boolean) => void,
 }>({
@@ -14,6 +15,7 @@ export const MessagesContext = createContext<{
     isMessageUpdating: false,
     addMessage: () => {},
     removeMessage: () => {},
+    removeAllMessages: () => {},
     updateMessage: () => {},
     setIsMessageUpdating: () => {},
 })
@@ -36,6 +38,10 @@ export function MessagesProvider( { children }: { children: ReactNode }) {
         setMessages(prevMessages => prevMessages.filter(message => message.id !== id))
     }
 
+    const removeAllMessages = () => {
+        setMessages(prevMessages => prevMessages = [] )
+    }
+
     const updateMessage = (id: string, updateFn: (prevText: string) => string) => {
         setMessages(prevMessages => prevMessages.map((message) => {
             if (message.id === id){
@@ -52,6 +58,7 @@ export function MessagesProvider( { children }: { children: ReactNode }) {
         messages,
         addMessage,
         removeMessage,
+        removeAllMessages,
         updateMessage,
         isMessageUpdating,
         setIsMessageUpdating,

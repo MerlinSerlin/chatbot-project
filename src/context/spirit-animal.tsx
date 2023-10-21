@@ -1,8 +1,5 @@
 import { ReactNode, createContext, useState } from "react"
-// import { Message } from "@/lib/validators/message"
 import { SpiritAnimal } from "@/app/helpers/constants/animal-data"
-import { nanoid } from "nanoid"
-import { set } from "zod"
 
 export const SpiritAnimalContext = createContext<{
     animal: SpiritAnimal[],
@@ -11,19 +8,13 @@ export const SpiritAnimalContext = createContext<{
     updateAnimal: (animal: SpiritAnimal) => void,
     isAnimalUpdating: boolean,
     setIsAnimalUpdating: (isUpdating: boolean) => void,
-    // addMessage: (message: Message) => void,
-    // removeMessage: (id: string) => void,
-    // updateMessage: (id: string, updateFn: (prevText: string) => string) => void,
 }>({
     animal: [],
     animalImageUrl: '',
     updateAnimalImageUrl: () => {},
     updateAnimal: () => {},
     isAnimalUpdating: false,
-    setIsAnimalUpdating: () => {},
-    // addMessage: () => {},
-    // removeMessage: () => {},
-    // updateMessage: () => {},
+    setIsAnimalUpdating: () => {}
 })
 
 export function SpiritAnimalProvider( { children }: { children: ReactNode }) {
@@ -47,22 +38,6 @@ export function SpiritAnimalProvider( { children }: { children: ReactNode }) {
         setAnimalImageUrl(prevAnimalImageUrl => prevAnimalImageUrl = animalImageUrl)
     }
 
-    // const removeMessage = (id: string) => {
-    //     setMessages(prevMessages => prevMessages.filter(message => message.id !== id))
-    // }
-
-    // const updateMessage = (id: string, updateFn: (prevText: string) => string) => {
-    //     setMessages(prevMessages => prevMessages.map((message) => {
-    //         if (message.id === id){
-    //             return {
-    //                 ...message,
-    //                 text: updateFn(message.text)
-    //             }
-    //         }
-    //         return message;
-    //     }))
-    // }
-
     return <SpiritAnimalContext.Provider value={{
         animal,
         animalImageUrl,
@@ -70,10 +45,6 @@ export function SpiritAnimalProvider( { children }: { children: ReactNode }) {
         updateAnimalImageUrl,
         isAnimalUpdating,
         setIsAnimalUpdating,
-        // addMessage,
-        // removeMessage,
-        // updateMessage,
-
     }}>
         {children}
     </SpiritAnimalContext.Provider>

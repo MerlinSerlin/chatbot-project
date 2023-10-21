@@ -20,7 +20,7 @@ const AnimalImage: FC<AnimalImageProps> = ({}) => {
             width={800}
             height={800}
         />
-    )
+)
 }
 
 export default AnimalImage
