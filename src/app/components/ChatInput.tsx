@@ -127,7 +127,16 @@ const ChatInput: FC<ChatInputProps> = ({className, ...props}) => {
             {isLoading ? (
               <Loader2 className='w-3 h-3 animate-spin' />
             ) : (
-              <CornerDownLeft className='w-3 h-3' />
+              <CornerDownLeft 
+                className='w-5 h-4' 
+                onClick={() => sendMessage(
+                  {
+                    id: nanoid(),
+                    isUserMessage: true,
+                    text: input
+                  }
+                )}
+              />
             )}
           </kbd>
         </div>
