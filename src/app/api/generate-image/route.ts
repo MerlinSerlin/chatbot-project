@@ -18,7 +18,7 @@ export async function POST( req: Request ){
         These eyes should show emotion, primarily empathy and these qualities: ${animal[0].symbolism}
         `,
         n: 1,
-        size: "1024x1024",
+        size: "512x512",
     });
 
     const url = image.data[0].url;
