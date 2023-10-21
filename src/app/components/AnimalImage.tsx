@@ -17,8 +17,8 @@ const AnimalImage: FC<AnimalImageProps> = ({}) => {
         <Image 
             src={animalImageUrl}
             alt={'a picture of an animal'}
-            width={526}
-            height={526}
+            width={800}
+            height={800}
         />
     )
 }
