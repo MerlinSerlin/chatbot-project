@@ -10,8 +10,6 @@ import { MessagesContext } from '@/context/messages';
 import { CornerDownLeft, Loader2 } from 'lucide-react';
 import toast from 'react-hot-toast';
 import ChatbotPrompt from './ChatbotPrompt';
-// import { GetChatbotPrompt } from '../helpers/constants/chatbot-prompt';
-
 
 interface ChatInputProps extends HTMLAttributes<HTMLDivElement> {}
 
@@ -95,6 +93,12 @@ const ChatInput: FC<ChatInputProps> = ({className, ...props}) => {
     }
   })
 
+  const messagePayload = {
+    id: nanoid(),
+    isUserMessage: true,
+    text: input
+  }
+
   return (
     <div {...props} className={cn('border-t border-zinc-300', className)}>
         <div className='relative mt-4 flex-1 overflow-hidden rounded-lg border-none outline-none'>
@@ -104,13 +108,7 @@ const ChatInput: FC<ChatInputProps> = ({className, ...props}) => {
             onKeyDown={(e) => {
               if (e.key === 'Enter' && !e.shiftKey) {
                 e.preventDefault();
-                
-                const message = {
-                  id: nanoid(),
-                  isUserMessage: true,
-                  text: input
-                }
-                sendMessage(message);
+                sendMessage(messagePayload);
               }
             }}
             maxRows={4}
@@ -129,13 +127,7 @@ const ChatInput: FC<ChatInputProps> = ({className, ...props}) => {
             ) : (
               <CornerDownLeft 
                 className='w-5 h-4' 
-                onClick={() => sendMessage(
-                  {
-                    id: nanoid(),
-                    isUserMessage: true,
-                    text: input
-                  }
-                )}
+                onClick={() => sendMessage(messagePayload)}
               />
             )}
           </kbd>

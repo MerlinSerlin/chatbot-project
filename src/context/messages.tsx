@@ -25,7 +25,7 @@ export function MessagesProvider( { children }: { children: ReactNode }) {
     const [messages, setMessages] = useState<Message[]>([
         {
             id: nanoid(),
-            text: 'Hello, how can I help you?',
+            text: 'Hello! I am your Spirit Animal Guide. Click the button to generate a spirit animal or ask me a question.',
             isUserMessage: false
         }
     ])

@@ -4,6 +4,7 @@ import { FC, useContext, useState } from 'react'
 
 import { SpiritAnimalContext } from '@/context/spirit-animal'
 import { SpiritAnimal, getSpiritAnimal } from '../helpers/constants/animal-data'
+import { MessagesContext } from '@/context/messages'
 
 
 import { useMutation } from '@tanstack/react-query'
@@ -28,6 +29,12 @@ const ImageGenerator: FC<ImageGenerator> = ({}) => {
     updateAnimalImageUrl,
   } = useContext(SpiritAnimalContext);
 
+  const {
+    messages,
+    addMessage,
+    removeAllMessages,
+  } = useContext(MessagesContext)
+
   const {mutate: getAnimal, isLoading} = useMutation({
     mutationFn: async (animal: SpiritAnimal) => {
       const response = await fetch('/api/generate-image', {
@@ -50,6 +57,12 @@ const ImageGenerator: FC<ImageGenerator> = ({}) => {
     },
     onMutate(animal){
       updateAnimal(animal);
+      removeAllMessages();
+      addMessage({
+        id: '',
+        isUserMessage: false,
+        text: `*${animal.sounds}* I am your Spirit ${animal.name}. How may I be of service?`,
+      })
     },
     onSuccess: async (stream) => {
       if (!stream) {
