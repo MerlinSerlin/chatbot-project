@@ -1,7 +1,5 @@
 'use client'
 
-import { useEffect } from 'react'
-
 import { MessagesContext } from '@/context/messages'
 import { SpiritAnimalContext } from '@/context/spirit-animal';
 import { cn } from '@/lib/utils';
@@ -13,26 +11,13 @@ interface ChatMessagesProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 const ChatMessages: FC<ChatMessagesProps> = ({className, ...props}) => {
-    const { messages, removeAllMessages, addMessage } = useContext(MessagesContext);
+
+    const { messages } = useContext(MessagesContext);
     const inverseMessages = [...messages].reverse();
-
+    
     const { animal } = useContext(SpiritAnimalContext);
-    const currentAnimalName = animal[animal.length - 1].name;
-
-    const text = animal.length === 1 ?
-    'Hello! I am your Spirit Animal Guide. Click the button to generate a spirit animal or ask me a question.'
-    : 
-    `Hello! I am your ${currentAnimalName} Animal Spirit. How may I be of service?` 
-
-    useEffect(() => {
-      removeAllMessages();
-      addMessage({
-        id: '1',
-        text: text,
-        isUserMessage: false,
-      })
-    }, [animal])
-
+    const animalName = animal[animal.length - 1].name;
+    
     return (
         <div
           {...props}
