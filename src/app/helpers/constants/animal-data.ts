@@ -54,7 +54,7 @@ export interface SpiritAnimal {
       when_in_balance: "Grounded and patient",
       when_out_of_balance: "Stubbornness or stuck in a rut",
       to_bring_into_balance: "Embrace change and go with the flow",
-      sounds: "Hissing and hissing",
+      sounds: "clicks, croaks, crackles, chirps, purrs, and grunts",
     },
     {
       name: "Dolphin",
@@ -254,7 +254,7 @@ export interface SpiritAnimal {
       when_in_balance: "Focused and determined pursuit of goals",
       when_out_of_balance: "Impulsivity or lack of direction",
       to_bring_into_balance: "Maintain focus and use speed wisely",
-      sounds: "Chirping and growling",
+      sounds: "Purring and growling",
     },
     {
       name: "Otter",
