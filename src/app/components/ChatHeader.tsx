@@ -17,7 +17,7 @@ const ChatHeader: FC = () => {
       <div className='flex flex-col items-start text-sm'>
         <p className='text-xs'>Chat with</p>
         <div className='flex gap-1.5 items-center'>
-          <p className='w-2 h-2 rounded-full bg-blue-500' />
+          <p className='w-2 h-2 rounded-full bg-green-600' />
           <p className='font-medium'>Your {chatbotName}</p>
         </div>
       </div>

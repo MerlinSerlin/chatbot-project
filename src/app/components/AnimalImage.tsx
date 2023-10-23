@@ -19,8 +19,8 @@ const AnimalImage: FC<AnimalImageProps> = ({}) => {
             alt={'a picture of an animal'}
             width={800}
             height={800}
+            className='rounded-lg'
         />
-        
     )
 }
 

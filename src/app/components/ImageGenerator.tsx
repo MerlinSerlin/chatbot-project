@@ -89,7 +89,7 @@ const ImageGenerator: FC<ImageGenerator> = ({}) => {
   return (
     isLoading ? 
     <div className='flex justify-center w-100 h-100 md:w-200 md:h-200 lg:w-400 lg:h-400'>
-      <AnimalIconLoader className='animate-spin' size={100}/>
+      <AnimalIconLoader className='animate-pulse' size={100}/>
     </div>
     :
     <button 
@@ -97,7 +97,7 @@ const ImageGenerator: FC<ImageGenerator> = ({}) => {
       className={
         cn(
           overlaidBtnClassName,
-          "bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded"
+          "text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-full text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
         )
       }
       onClick={() => {
