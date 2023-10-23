@@ -10,8 +10,8 @@ interface AnimalImageProps {
 }
 
 const AnimalImage: FC<AnimalImageProps> = ({}) => {
-    const { animalImageUrl } = useContext(SpiritAnimalContext);
-    if (!animalImageUrl) return null;
+    const { animalImageUrl, isAnimalUpdating } = useContext(SpiritAnimalContext);
+    if (!animalImageUrl || isAnimalUpdating) return null;
 
     return (
         <Image 
@@ -20,7 +20,8 @@ const AnimalImage: FC<AnimalImageProps> = ({}) => {
             width={800}
             height={800}
         />
-)
+        
+    )
 }
 
 export default AnimalImage
