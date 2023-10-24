@@ -1,3 +1,6 @@
+export const runtime = 'edge'; // 'nodejs' is the default
+export const preferredRegion = 'iad1'; // only execute this function on iad1
+
 import OpenAI from "openai";
 
 export async function POST( req: Request ){
