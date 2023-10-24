@@ -1,9 +1,13 @@
+export const runtime = 'edge'; // 'nodejs' is the default
+export const preferredRegion = 'iad1'; // only execute this function on iad1
+
 import {
   ChatGPTMessage,
   OpenAIStream,
   OpenAIStreamPayload,
 } from '@/lib/openai-stream'
 import { MessageArraySchema } from '@/lib/validators/message'
+
 
 export async function POST(req: Request) {
     const { messages, prompt } = await req.json()
