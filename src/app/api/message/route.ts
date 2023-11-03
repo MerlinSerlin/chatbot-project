@@ -1,11 +1,11 @@
-export const runtime = 'edge'; // 'nodejs' is the default
-
 import {
   ChatGPTMessage,
   OpenAIStream,
   OpenAIStreamPayload,
 } from '@/lib/openai-stream'
 import { MessageArraySchema } from '@/lib/validators/message'
+
+export const runtime = 'edge'; // 'nodejs' is the default
 
 
 export async function POST(req: Request) {
