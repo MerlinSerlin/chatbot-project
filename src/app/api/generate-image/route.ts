@@ -1,6 +1,6 @@
-export const runtime = 'edge'; // 'nodejs' is the default
-
 import OpenAI from "openai";
+
+export const runtime = 'edge'; // 'nodejs' is the default
 
 export async function POST( req: Request ){
     const openai = new OpenAI({
